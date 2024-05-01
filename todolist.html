@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="stylescopy.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="">Javascript</a>
+        </div>
+        <div class="ul">
+        <ul>
+            <li><a href="index.html">Calculator</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="quizz.html">Quizz</a></li>
+            <li><a href="rock.html">Game</a></li>
+            <li><a href="todolist.html">ToDoList</a></li>
+        </ul>
+        </div>
+        <div class="hi">
+        <div class="menu">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        </div>
+    </nav>
+    <div class="contain">
+    <div class="container">
+        <div class="todo-app">
+            <h1>To-Do-List</h1>
+        </div>
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Add your text">
+            <button onclick="result()" class="add">Add</button>
+        </div>
+        <div class="text">
+        <ul id="list-container">
+        </ul>
+    </div>
+    </div>
+    </div>
+    
+    <script>
+        const text=document.getElementById('input-box');
+        const list=document.getElementById('list-container');
+         function result(){
+            if(text.value===''){
+                alert("Please write a task");
+            }else{
+            let li=document.createElement("li");
+            li.innerHTML=`${text.value} <button class="id">Done</button> `;      
+            list.appendChild(li);
+            text.value="";
+            li.querySelector(".id").addEventListener("click", remove);
+                function remove(){
+                    li.remove();
+                }
+            }
+        }
+        const menu= document.querySelector('.menu')
+        const menuList=document.querySelector('nav .ul')
+        menu.addEventListener('click', ()=>{
+            menuList.classList.toggle('showmenu')
+        })
+    </script>
+    
+</body>
+</html>

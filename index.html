@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="">Javascript</a>
+        </div>
+        <div class="ul">
+        <ul>
+            <li><a href="index.html">Calculator</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="quizz.html">Quizz</a></li>
+            <li><a href="rock.html">Game</a></li>
+            <li><a href="todolist.html">ToDoList</a></li>
+        </ul>
+        </div>
+        <div class="hi">
+        <div class="menu">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        </div>
+    </nav>
+    <div class="head">
+        <h1>CALCULATOR</h1>
+    </div>
+    
+    <div class="calc">
+        <div class="calculator">
+        <p id="lol"></p>
+        <button id="open" class="col" onclick="
+            cal=document.getElementById('open').textContent;
+            update();
+        ">&#40</button>
+        <button id="close" class="col" onclick="
+            cal=document.getElementById('close').textContent;
+            update();
+        ">&#41</button>
+        <button id="allclear" class="col" onclick="
+            str='';
+            document.getElementById('lol').innerHTML=`${str}`;
+        ">AC</button>
+        <button id="clear" class="col" onclick="
+            str=str.slice(0,-1);
+            document.getElementById('lol').innerHTML=`${str}`;
+        ">C</button>
+    <br>
+        
+        <button id="one" onclick="
+            cal=document.getElementById('one').innerHTML;
+            update();
+        ">1</button>
+        <button id="two" onclick="
+            cal=document.getElementById('two').innerHTML;
+            update();
+        ">2</button>
+        <button id="three" onclick="
+            cal=document.getElementById('three').innerHTML;
+            update();
+        ">3</button>
+        <button id="add" class="col" onclick="
+            cal=document.getElementById('add').textContent;
+            update();
+        ">+</button>
+        <br>
+        
+        <button id="four" onclick="
+            cal=document.getElementById('four').textContent;
+            update();
+        ">4</button>
+        <button id="five" onclick="
+             cal=document.getElementById('five').textContent;
+             update();
+         ">5</button>
+         <button id="six" onclick="
+            cal=document.getElementById('six').textContent;
+            update();
+        ">6</button>
+        <button id="sub" class="col"onclick="
+             cal=document.getElementById('sub').textContent;
+             update();
+         ">-</button>
+         <br>
+         
+         <button id="seven" onclick="
+            cal=document.getElementById('seven').textContent;
+            update();
+        ">7</button>
+         <button id="eight" onclick="
+            cal=document.getElementById('eight').textContent;
+            update();
+        ">8</button>
+         <button id="nine" onclick="
+            cal=document.getElementById('nine').textContent;
+            update();
+        ">9</button>
+         <button id="mul" class="col" onclick="
+                cal=document.getElementById('mul').textContent;
+                update();
+        ">*</button>
+     <br>
+        <button id="dot" onclick="
+            cal=document.getElementById('dot').textContent;
+             update();
+         ">.</button>
+  <button id="zero" onclick="
+         cal=document.getElementById('zero').textContent;
+        update();
+    ">0</button>
+        <button id="equal" onclick="
+             document.getElementById('lol').innerHTML=`${eval(str)}`;
+        ">=</button>
+         <button id="div" class="col" onclick="
+         cal=document.getElementById('div').textContent;
+         update();
+     ">/</button>
+    </div>
+</div>
+    <script>
+        let cal;
+        let str="";
+        function update(){
+            str+=cal;
+            document.getElementById('lol').innerHTML=`${str}`;
+        }
+        
+    const menu= document.querySelector('.menu')
+    const menuList=document.querySelector('nav .ul')
+    menu.addEventListener('click', ()=>{
+        menuList.classList.toggle('showmenu')
+    })
+    </script>
+    
+</body>
+</html>

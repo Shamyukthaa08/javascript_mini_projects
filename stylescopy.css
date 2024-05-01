@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1{
+    color:#112649;
+    font-size: 40px;
+}
+.contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    padding-bottom: 200px;
+    border-radius: 20px;
+    width:500px;
+}
+.add{
+    background-color: #112649;
+   
+    padding:9px 22px;
+    border:none;
+    border-radius: 10px;
+    color:rgb(255, 255, 255);
+    font-size: 16px;
+}
+.add:hover{
+    background-color: #98c1d9;
+}
+.row input{
+    width:270px;
+    padding:10px 15px;
+    border:1px solid rgb(189, 188, 188);
+    border-radius: 20px;
+}
+li{
+    margin-left:-100px;
+    list-style: none;
+    font-size: 22px;
+    padding:5px 0;
+}
+.id{
+    padding:8px 15px;
+    border:none;
+    border-radius: 10px;
+    background-color:#ff704d;
+    font-size: 12px;
+    color:white;
+    margin-left:10px;
+}
+.id:hover{
+    background-color: #e36343;
+}
+nav{
+    background-color: black;
+    font-size: 20px;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    
+
+   
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 8px;
+    
+    
+}
+.ul{
+    width: 100%;
+   display: flex;
+   justify-content: flex-end;
+
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+.logo a{
+    font-size: 36px;
+    font-weight: bold;
+    color: whitesmoke;
+    text-decoration: none;
+    display: flex;
+    padding-left: 30px;
+    
+}
+
+nav a:hover{
+    color: red;
+}
+.menu-line{
+    height: 3px;
+    width:20px;
+    background-color: white;
+    margin-bottom: 3px;
+}
+.menu{
+cursor: pointer;
+display: none;
+}
+@media all and (max-width:640px){
+nav{
+    flex-direction: column;
+
+}
+nav li{
+    display: block;
+    padding: 10px 0;
+}
+.ul{
+   margin: auto;
+    display: none;
+}
+.logo{
+    align-self: flex;
+    margin:10px 10px 0px 30px;
+
+}
+.menu{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+}
+.showmenu{
+    display: block;
+}
+.img img{
+    display: none;
+}
+.btn{
+    display: none;
+}
+
+
+}
+
